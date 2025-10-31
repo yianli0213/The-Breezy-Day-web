@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 /**
  * Custom hook for fetching data from API
@@ -11,7 +11,7 @@ export function useApi(fetchFunction, initialData = null) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const fetchData = async () => {
+  const fetchData = useCallback(async () => {
     try {
       setLoading(true);
       setError(null);
@@ -23,11 +23,11 @@ export function useApi(fetchFunction, initialData = null) {
     } finally {
       setLoading(false);
     }
-  };
+  }, [fetchFunction]);
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [fetchData]);
 
   return { 
     data, 
