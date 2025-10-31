@@ -4,6 +4,13 @@ import { middleware } from '@line/bot-sdk';
 // LINE Bot webhook handler
 export const handleWebhook = async (req, res) => {
   try {
+    if (!client) {
+      return res.status(503).json({
+        success: false,
+        error: 'LINE Bot is not configured. Please set LINE_CHANNEL_ACCESS_TOKEN and LINE_CHANNEL_SECRET environment variables.'
+      });
+    }
+
     const events = req.body.events;
     
     // Process each event
@@ -45,6 +52,13 @@ export const handleWebhook = async (req, res) => {
 // Send message to specific user
 export const sendMessage = async (req, res) => {
   try {
+    if (!client) {
+      return res.status(503).json({
+        success: false,
+        error: 'LINE Bot is not configured. Please set LINE_CHANNEL_ACCESS_TOKEN and LINE_CHANNEL_SECRET environment variables.'
+      });
+    }
+
     const { userId, message } = req.body;
     
     if (!userId || !message) {
