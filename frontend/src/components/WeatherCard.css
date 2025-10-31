@@ -1,0 +1,84 @@
+.weather-card {
+  background: linear-gradient(135deg, #FFD89B 0%, #19547B 100%);
+  color: white;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.location {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.card-loading {
+  text-align: center;
+  padding: 40px;
+  color: var(--text-light);
+}
+
+.weather-info {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.temperature {
+  margin-bottom: 16px;
+}
+
+.temp-value {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.temp-unit {
+  font-size: 2rem;
+  opacity: 0.8;
+}
+
+.condition {
+  font-size: 1.25rem;
+  margin-bottom: 24px;
+  opacity: 0.9;
+}
+
+.details {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.detail-item {
+  display: flex;
+  gap: 8px;
+}
+
+.detail-label {
+  opacity: 0.8;
+}
+
+.detail-value {
+  font-weight: 600;
+}
+
+.refresh-btn {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.refresh-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
