@@ -1,5 +1,3 @@
-# The-Breezy-Day
-網際網路概論黑客松提案-提高幸福感預防過敏的功能型網站
 # 🌤️ Breezy Day  
 **出門前即時掌握天氣、過敏與穿搭建議**  
 _Web Application Project for Internet Concepts Course_
